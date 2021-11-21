@@ -1,0 +1,29 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "innominata"
+name = "StarsandRemap"
+versionNumber = "0.0.1"
+description = "Remaps keys"
+websiteUrl = "https://github.com/innominata/StarsandRemap"
+containsNsfwContent = false
+
+[package.dependencies]
+"BepInEx-BepInExPack_Starsand"= "5.4.16"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./"
+
+[[build.copy]]
+source = "./obj/Debug/net472/StarsandRemap.dll"
+target = "./StarsandRemap.dll"
+[[build.copy]]
+source = "./font"
+target = "./font"
+[publish]
+repository = "https://starsand.thunderstore.io"
+communities = ["starsand"]
+categories = []
